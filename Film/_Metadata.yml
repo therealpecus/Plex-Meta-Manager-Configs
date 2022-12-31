@@ -1,0 +1,14 @@
+metadata:
+  Guerre stellari (despecialized edition):
+    url_poster: https://theposterdb.com/api/assets/1410
+    # edition: despecialized edition  # requires plex pass
+  L'Impero colpisce ancora (despecialized edition):
+    url_poster: https://theposterdb.com/api/assets/1411
+    # edition: despecialized edition  # requires plex pass
+  Il ritorno dello Jedi (despecialized edition):
+    url_poster: https://theposterdb.com/api/assets/1412
+    # edition: despecialized edition  # requires plex pass
+  Maga Martina 2 - Viaggio in India:
+    collection.remove: Maga Martina
+  Maga Martina e il libro magico del Draghetto:
+    collection.remove: Maga Martina

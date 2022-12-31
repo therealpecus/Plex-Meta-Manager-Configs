@@ -1,0 +1,95 @@
+templates:
+  Actor:
+    actor: tmdb
+    tmdb_person: <<person>>
+    tmdb_actor_details: <<person>>
+    sort_title: +_<<collection_name>>
+    sync_mode: sync
+    collection_order: release
+    collection_mode: hide
+collections:
+  Vulture’s 101 Best Movie Endings:
+    letterboxd_list: https://letterboxd.com/brianformo/list/vultures-101-best-movie-endings/
+    collection_order: custom
+    sync_mode: sync
+    file_poster: /config/poster/letterboxd.png
+    schedule: weekly(thursday)
+  Sight and Sound’s Greatest Films of All Time 2022:
+    letterboxd_list: https://letterboxd.com/bfi/list/sight-and-sounds-greatest-films-of-all-time/
+    summary: Every decade the Sight and Sound team asks critics to name the greatest films of all time. Here are the results of the 2022 poll.
+    collection_order: custom
+    sync_mode: sync
+    file_poster: /config/poster/sight-and-sound-2022.jpg
+    schedule: weekly(thursday)
+  Official Top 250 Narrative Feature Films:
+    letterboxd_list: https://letterboxd.com/dave/list/official-top-250-narrative-feature-films/
+    collection_order: custom
+    sync_mode: sync
+    file_poster: /config/poster/letterboxd.png
+    schedule: weekly(thursday)
+  Walt Disney Treasures - The Chronological Donald, Volume One:
+    tmdb_list: 8231458
+    collection_order: custom
+    sync_mode: sync
+    collection_mode: hide_items
+    tmdb_poster: 324206
+    schedule: monthly(1)
+  Pixar Short Films Collection, Volume 1:
+    tmdb_list: 8231462
+    collection_order: custom
+    sync_mode: sync
+    collection_mode: hide_items
+    tmdb_poster: 288767
+    schedule: monthly(1)
+  Pixar Short Films Collection, Volume 2:
+    tmdb_list: 8231465
+    collection_order: custom
+    sync_mode: sync
+    collection_mode: hide_items
+    tmdb_poster: 303659
+    schedule: monthly(1)
+  Pixar Short Films Collection, Volume 3:
+    tmdb_list: 8232248
+    collection_order: custom
+    sync_mode: sync
+    collection_mode: hide_items
+    tmdb_poster: 553381
+    schedule: monthly(1)
+  Bud Spencer & Terence Hill:
+    plex_all: true
+    summary: I film di Bud Spencer e Terence Hill
+    filters:
+      actor:
+        - Terence Hill
+        - Bud Spencer
+    collection_mode: hide_items
+    file_poster: /config/poster/Bud-Spencer-Terence-Hill-Collection.jpg
+    schedule: yearly(06/30)
+  Walt Disney Treasures - Mickey Mouse in Living Color:
+    tmdb_list: 8233797
+    collection_order: custom
+    sync_mode: sync
+    collection_mode: hide_items
+    tmdb_poster: 371654
+    schedule: monthly(1)
+  Walt Disney Treasures - The Complete Goofy:
+    tmdb_list: 8233803
+    collection_order: custom
+    sync_mode: sync
+    collection_mode: hide_items
+    tmdb_poster: 293973
+    schedule: monthly(1)
+metadata_path:
+  - pmm: seasonal
+    template_variables:
+      collection_mode: hide
+      exclude:
+        - years
+        - valentine
+        - patrick
+        - easter
+        - mother
+        - memorial
+        - father
+        - independence
+        - labor

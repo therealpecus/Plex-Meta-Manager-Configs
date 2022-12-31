@@ -1,0 +1,38 @@
+# sourced from https://github.com/meisnate12/Plex-Meta-Manager-Configs/blob/08b0124430eb6c0de1938a9ec26b3313996dd0b9/PMM/movie/decade.yml
+external_templates:
+  git: PMM/templates
+  template_variables:
+    collection_section: 12
+
+templates:
+  decade_dynamic:
+    default:
+      limit: 100
+      sort_by: critic_rating.desc
+      url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-Images/master/decade/best/<<key>>.jpg
+    smart_filter:
+      sort_by: <<sort_by>>
+      all:
+        decade: <<value>>
+        genre.not:
+          - Short
+      limit: <<limit>>
+    collection_mode: hide
+
+collections:
+  Decade Collections:
+    template:
+      - name: separator
+        separator: decade
+    collection_mode: hide
+
+dynamic_collections:
+  Decade:
+    type: decade
+    template:
+      - decade_dynamic
+      - shared
+    title_format: Il meglio degli anni <<key_name>> # this needs to match the folder name in config/assets in order to find the poster.ext file
+    title_override:
+      2020: Il meglio degli anni 2020 (in progress)
+    remove_suffix: s

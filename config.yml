@@ -1,0 +1,143 @@
+libraries: # This is called out once within the config.yml file
+  Film: # Each library must match the Plex library name
+    metadata_path:
+      - folder: config/Film/ # This is a local directory on the system
+      - pmm: basic # This is a file within the defaults folder in the Repository
+      - pmm: imdb # This is a file within the defaults folder in the Repository
+        template_variables:
+          use_lowest: false
+          use_popular: false
+          schedule: weekly(friday)
+      - file: config/Genre.yml
+        template_variables:
+          collection_mode: hide
+          excluding_genre: Short
+          append_addons:
+            Animation:
+              - Animazione
+            Comedy:
+              - Commedia
+            Documentary:
+              - Documentario
+            Drama:
+              - Dramma
+            Family:
+              - Famiglia
+            Sci-Fi:
+              - Fantascienza
+            War:
+              - Guerra
+            Mystery:
+              - Mistero
+            Music:
+              - Musica
+            History:
+              - Storia
+            TV Movie:
+              - televisione film
+            Film Noir:
+              - Film-Noir
+          title_override:
+            Biography: Biopic
+            Animazione: Animation
+            Commedia: Comedy
+            Documentario: Documentary
+            Dramma: Drama
+            Famiglia: Family
+            Fantascienza: Sci-Fi
+            Guerra: War
+            Mistero: Mistery
+            Musica: Music
+            Storia: History
+            televisione film: TV Movie
+            Film-Noir: Film Noir
+          summary_genre: Film con genere <<key_name>>
+          genre_summary: Film con genere <<key_name>>
+          summary: Film con genere <<key_name>>
+          schedule: weekly(friday)
+      - pmm: franchise
+        template_variables:
+          schedule: weekly(friday)
+    overlay_path:
+      - remove_overlays: false # Set this to true to remove all overlays
+      - file: config/Overlays.yml # This is a local file on the system
+      - pmm: ribbon # This is a file within the defaults folder in the Repository
+      - pmm: resolution
+    operations:
+      split_duplicates: false
+  Serie TV:
+    metadata_path:
+      - folder: config/Serie TV/
+    overlay_path:
+      - remove_overlays: false # Set this to true to remove all overlays
+      - file: config/Overlays.yml # This is a local file on the system
+      - pmm: ribbon # This is a file within the defaults folder in the Repository
+      - pmm: resolution
+    operations:
+      split_duplicates: false
+#   Musica:
+#     metadata_path:
+#       - file: config/Musica.yml
+# playlist_files:
+#   - file: config/playlists.yml
+#   - pmm: playlist # This is a file within the defaults folder in the Repository
+settings:
+  cache: true
+  cache_expiration: 60
+  asset_directory: config/assets
+  asset_folders: true
+  asset_depth: 0
+  create_asset_folders: false
+  prioritize_assets: false
+  dimensional_asset_rename: false
+  download_url_assets: false
+  show_missing_season_assets: false
+  show_missing_episode_assets: false
+  show_asset_not_needed: true
+  sync_mode: append
+  minimum_items: 1
+  default_collection_order:
+  delete_below_minimum: true
+  delete_not_scheduled: false
+  run_again_delay: 2
+  missing_only_released: false
+  only_filter_missing: false
+  show_unmanaged: true
+  show_filtered: false
+  show_options: false
+  show_missing: true
+  show_missing_assets: true
+  save_report: true
+  tvdb_language: ita
+  ignore_ids:
+  ignore_imdb_ids:
+  item_refresh_delay: 0
+  playlist_sync_to_user: all
+  playlist_report: false
+  verify_ssl: true
+  custom_repo:
+  check_nightly: false
+  show_unconfigured: true
+plex: # Can be individually specified per library as well; REQUIRED for the script to run
+  url: http://192.168.1.100:32400
+  token: 1fWFpgCrbnshMvTwB-kp
+  timeout: 60
+  clean_bundles: false
+  empty_trash: false
+  optimize: false
+tmdb: # REQUIRED for the script to run
+  apikey: 342b592bb3a643a9c4b4ef1e68b57220
+  language: it
+  cache_expiration: 60
+  region:
+trakt:
+  client_id: 38c300c43320aff79d5e30af4deef11687c7e0556b4e48bf0a420a63afcd44ed
+  client_secret: 3b64a9819145ab888cf393702350ee78ca7d122899c38dfc58c23753794e1b25
+  pin:
+  authorization:
+    access_token: 70ae7ad7eb6bc76f3194da02c2fd00db6f6110024dd02609a6d5b7d04b3ed1e7
+    token_type: Bearer
+    expires_in: 7889237
+    refresh_token: cf9548d580ac715c98f67509b4b4c1afe78053fc5de4a89187aac14adc45ef40
+    scope: public
+    created_at: 1672129627
