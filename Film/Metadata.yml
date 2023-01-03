@@ -8,7 +8,3 @@ metadata:
   Il ritorno dello Jedi (despecialized edition):
     url_poster: https://theposterdb.com/api/assets/1412
     # edition: despecialized edition  # requires plex pass
-  Maga Martina 2 - Viaggio in India:
-    collection.remove: Maga Martina
-  Maga Martina e il libro magico del Draghetto:
-    collection.remove: Maga Martina

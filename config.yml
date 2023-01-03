@@ -1,7 +1,13 @@
 libraries: # This is called out once within the config.yml file
   Film: # Each library must match the Plex library name
     metadata_path:
-      - folder: config/Film/ # This is a local directory on the system
+      # - folder: config/Film/ # This is a local directory on the system
+      - file: config/Film/Metadata.yml
+      - file: config/Film/Collections.yml
+      - file: config/Film/Decades.yml
+        template_variables:
+          placeholder_tmdb_movie: 11
+          collection_mode: hide
       - pmm: basic # This is a file within the defaults folder in the Repository
       - pmm: imdb # This is a file within the defaults folder in the Repository
         template_variables:
@@ -10,6 +16,7 @@ libraries: # This is called out once within the config.yml file
           schedule: weekly(friday)
       - file: config/Genre.yml
         template_variables:
+          placeholder_tmdb_movie: 11
           collection_mode: hide
           excluding_genre: Short
           append_addons:
