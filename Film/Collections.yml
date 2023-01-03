@@ -28,11 +28,56 @@ collections:
     file_poster: /config/poster/letterboxd.png
     schedule: weekly(thursday)
   Walt Disney Treasures - The Chronological Donald, Volume One:
+    sort_title: Walt Disney Treasures - The Chronological Donald, Volume 1
     tmdb_list: 8231458
     collection_order: custom
     sync_mode: sync
     collection_mode: hide_items
     tmdb_poster: 324206
+    tmdb_summary: 324206
+    schedule: monthly(1)
+  Walt Disney Treasures - The Chronological Donald, Volume Two:
+    sort_title: Walt Disney Treasures - The Chronological Donald, Volume 2
+    imdb_list: https://www.imdb.com/list/ls005373895/
+    collection_order: custom
+    sync_mode: sync
+    collection_mode: hide_items
+    tmdb_poster: 315597
+    tmdb_summary: 315597
+    schedule: monthly(1)
+  Walt Disney Treasures - The Chronological Donald, Volume Three:
+    sort_title: Walt Disney Treasures - The Chronological Donald, Volume 3
+    imdb_list: https://www.imdb.com/list/ls068098205/
+    collection_order: custom
+    sync_mode: sync
+    collection_mode: hide_items
+    tmdb_poster: 328187
+    tmdb_summary: 328187
+    schedule: monthly(1)
+  Walt Disney Treasures - The Chronological Donald, Volume Four:
+    sort_title: Walt Disney Treasures - The Chronological Donald, Volume 4
+    imdb_list: https://www.imdb.com/list/ls068098985/
+    collection_order: custom
+    sync_mode: sync
+    collection_mode: hide_items
+    tmdb_poster: 328190
+    tmdb_summary: 328190
+    schedule: monthly(1)
+  Walt Disney Treasures - The Complete Pluto, Volume One:
+    tmdb_list: 8233876
+    collection_order: custom
+    sync_mode: sync
+    collection_mode: hide_items
+    tmdb_poster: 320931
+    tmdb_summary: 320931
+    schedule: monthly(1)
+  Walt Disney Treasures - The Complete Pluto, Volume Two:
+    imdb_list: https://www.imdb.com/list/ls025697798/
+    collection_order: custom
+    sync_mode: sync
+    collection_mode: hide_items
+    tmdb_poster: 320932
+    tmdb_summary: 320932
     schedule: monthly(1)
   Pixar Short Films Collection, Volume 1:
     tmdb_list: 8231462
@@ -47,6 +92,7 @@ collections:
     sync_mode: sync
     collection_mode: hide_items
     tmdb_poster: 303659
+    tmdb_summary: 303659
     schedule: monthly(1)
   Pixar Short Films Collection, Volume 3:
     tmdb_list: 8232248
@@ -54,6 +100,7 @@ collections:
     sync_mode: sync
     collection_mode: hide_items
     tmdb_poster: 553381
+    tmdb_summary: 553381
     schedule: monthly(1)
   Bud Spencer & Terence Hill:
     plex_all: true
@@ -65,12 +112,21 @@ collections:
     collection_mode: hide_items
     file_poster: /config/poster/Bud-Spencer-Terence-Hill-Collection.jpg
     schedule: yearly(06/30)
-  Walt Disney Treasures - Mickey Mouse in Living Color:
-    tmdb_list: 8233797
+  Walt Disney Treasures - Mickey Mouse in Living Color, Volume One:
+    imdb_list: https://www.imdb.com/list/ls005373276/
     collection_order: custom
     sync_mode: sync
     collection_mode: hide_items
     tmdb_poster: 371654
+    tmdb_summary: 371654
+    schedule: monthly(1)
+  Walt Disney Treasures - Mickey Mouse in Living Color, Volume Two:
+    imdb_list: https://www.imdb.com/list/ls005373489/
+    collection_order: custom
+    sync_mode: sync
+    collection_mode: hide_items
+    tmdb_poster: 291833
+    tmdb_summary: 291833
     schedule: monthly(1)
   Walt Disney Treasures - The Complete Goofy:
     tmdb_list: 8233803
@@ -78,6 +134,7 @@ collections:
     sync_mode: sync
     collection_mode: hide_items
     tmdb_poster: 293973
+    tmdb_summary: 293973
     schedule: monthly(1)
 metadata_path:
   - pmm: seasonal
