@@ -1,22 +1,23 @@
 libraries: # This is called out once within the config.yml file
   Film: # Each library must match the Plex library name
+    template_variables:
+      language: it
+      placeholder_tmdb_movie: 11
     metadata_path:
       # - folder: config/Film/ # This is a local directory on the system
       - file: config/Film/Metadata.yml
-      - file: config/Film/Collections.yml
       - file: config/Film/Decades.yml
-        template_variables:
-          placeholder_tmdb_movie: 11
-          collection_mode: hide
       - pmm: basic # This is a file within the defaults folder in the Repository
+        template_variables:
+          collection_mode: hide
       - pmm: imdb # This is a file within the defaults folder in the Repository
         template_variables:
+          collection_mode: hide
           use_lowest: false
           use_popular: false
           schedule: weekly(friday)
       - file: config/Genre.yml
         template_variables:
-          placeholder_tmdb_movie: 11
           collection_mode: hide
           excluding_genre: Short
           append_addons:
@@ -64,12 +65,15 @@ libraries: # This is called out once within the config.yml file
           schedule: weekly(friday)
       - pmm: franchise
         template_variables:
+          collection_mode: show_items
           schedule: weekly(friday)
+      - file: config/Film/Collections.yml # might override some franchise collections
     overlay_path:
       - remove_overlays: false # Set this to true to remove all overlays
       - file: config/Overlays.yml # This is a local file on the system
       - pmm: ribbon # This is a file within the defaults folder in the Repository
       - pmm: resolution
+      - pmm: versions
     operations:
       split_duplicates: false
   Serie TV:
@@ -80,6 +84,7 @@ libraries: # This is called out once within the config.yml file
       - file: config/Overlays.yml # This is a local file on the system
       - pmm: ribbon # This is a file within the defaults folder in the Repository
       - pmm: resolution
+      - pmm: versions
     operations:
       split_duplicates: false
 #   Musica:
@@ -125,6 +130,7 @@ settings:
   custom_repo:
   check_nightly: false
   show_unconfigured: true
+  playlist_exclude_users:
 plex: # Can be individually specified per library as well; REQUIRED for the script to run
   url: http://192.168.1.100:32400
   token: 1fWFpgCrbnshMvTwB-kp

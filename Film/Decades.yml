@@ -24,6 +24,7 @@ collections:
     template:
       - name: separator
         separator: decade
+    collection_mode: hide
 
 dynamic_collections:
   Decade:
@@ -35,3 +36,4 @@ dynamic_collections:
     title_override:
       2020: Il meglio degli anni 2020 (in progress)
     remove_suffix: s
+    collection_mode: hide

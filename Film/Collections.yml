@@ -136,13 +136,26 @@ collections:
     tmdb_poster: 293973
     tmdb_summary: 293973
     schedule: monthly(1)
+  Cars Toons:
+    plex_search:
+      all:
+        collection: Cars Toons
+    collection_mode: hide_items
+  "Ice Age: Holiday Specials Collection":
+    plex_search:
+      all:
+        collection: "Ice Age: Holiday Specials Collection"
+    collection_mode: hide_items
+  The Infinity Saga MCU - Collezione:
+    tmdb_list: 138460
+    collection_order: custom
+    sync_mode: sync
 metadata_path:
   - pmm: seasonal
     template_variables:
       collection_mode: hide
       exclude:
         - years
-        - valentine
         - patrick
         - easter
         - mother
