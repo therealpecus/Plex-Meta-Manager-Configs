@@ -1,10 +1,19 @@
 metadata:
-  Guerre stellari (despecialized edition):
+  Guerre stellari (Despecialized Edition):
+    url_poster: https://theposterdb.com/api/assets/19909
+    # edition: despecialized edition  # requires plex pass
+  L'Impero colpisce ancora (Despecialized Edition):
+    url_poster: https://theposterdb.com/api/assets/19910
+    # edition: despecialized edition  # requires plex pass
+  Il ritorno dello Jedi (Despecialized Edition):
+    url_poster: https://theposterdb.com/api/assets/19911
+    # edition: despecialized edition  # requires plex pass
+  Guerre stellari (4K77):
     url_poster: https://theposterdb.com/api/assets/1410
     # edition: despecialized edition  # requires plex pass
-  L'Impero colpisce ancora (despecialized edition):
-    url_poster: https://theposterdb.com/api/assets/1411
-    # edition: despecialized edition  # requires plex pass
-  Il ritorno dello Jedi (despecialized edition):
-    url_poster: https://theposterdb.com/api/assets/1412
-    # edition: despecialized edition  # requires plex pass
+  # L'Impero colpisce ancora (4K80):
+  #   url_poster: https://theposterdb.com/api/assets/1411
+  #   # edition: despecialized edition  # requires plex pass
+  # Il ritorno dello Jedi (4K83):
+  #   url_poster: https://theposterdb.com/api/assets/1412
+  #   # edition: despecialized edition  # requires plex pass
