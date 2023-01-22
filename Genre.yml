@@ -1,44 +1,37 @@
-#############################################################
-#                 Dynamic Genre Collections                 #
-#         Created by Yozora, Bullmoose20, & Sohjiro         #
-#############################################################
-#  Call this from your config.yml (Movie or Show)           #
-#  If nothing is specified these are the defaults           #
-#                                                           #
-#    metadata_path:                                         #
-#      - git: PMM/genre                                     #
-#        template_variables:                                #
-#          # Turn the separator collection on/off           #
-#          use_separator: true                              #
-#          # Separator style (red, blue, green, gray,       #
-#              purple, stb, orig)                           #
-#          sep_style: orig                                  #
-#          # Sets how the collection is sorted              #
-#          sort_by: release.desc                            #
-#          # Sets the collection mode of the collection     #
-#          collection_mode:                                 #
-#          # Sets the value at the start of the sort title  #
-#          collection_section: "06"                         #
-#############################################################
+##############################################################################
+#                        Based on Genre Collections                          #
+#                 Created by Yozora, Bullmoose20, & Sohjiro                  #
+#          EDITING THIS FILE MAY CAUSE PULLING NEW UPDATES TO FAIL           #
+#        https://metamanager.wiki/en/latest/defaults/both/genre.html         #
+##############################################################################
+
+templates:
+  genre_not_short:
+    default:
+      sort_by: release.desc
+      sort_by_<<key>>: <<sort_by>>
+      limit_<<key>>: <<limit>>
+      search_value: <<value>>
+    optional:
+      - limit
+      - type
+    smart_filter:
+      sort_by: <<sort_by_<<key>>>>
+      limit: <<limit_<<key>>>>
+      type: <<type>>
+      all:
+        genre.not: Short
+        any:
+          <<search_term>>: <<search_value>>
+    summary: Film con genere <<key_name>>
 
 external_templates:
-  git: PMM/templates
+  pmm: templates
   template_variables:
     collection_section: "06"
 
-templates:
-  genre_dynamic:
-    default:
-      sort_by: release.desc
-    optional:
-      - excluding_genre
-    url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-Images/master/genre/<<key_name_encoded>>.jpg
-    smart_filter:
-      sort_by: <<sort_by>>
-      all:
-        genre.not: <<excluding_genre>>
-        any:
-          genre: <<value>>
+translations:
+  pmm: translations
 
 collections:
   Genre Collections:
@@ -51,10 +44,16 @@ dynamic_collections:
     type: genre
     title_format: <<key_name>>
     template:
-      - genre_dynamic
+      - genre_not_short
+      # - translation
       - shared
-    title_override:
-      Biography: Biopic
+    template_variables:
+      search_term:
+        default: genre
+      image:
+        default: genre/<<original_key_name_encoded>>
+      # translation_key:
+      #   default: genre
     addons:
       Action:
         - Action/Adventure
@@ -70,8 +69,8 @@ dynamic_collections:
         - Action & adventure
         - Action and Adventure
         - Action and adventure
-      Biography:
-        - Biopic
+      Biopic:
+        - Biography
       Family:
         - Kids & Family
       Fantasy:
@@ -79,8 +78,7 @@ dynamic_collections:
         - Science Fiction & Fantasy
         - Science-Fiction & Fantasy
         - Sci-Fi & Fantasy
-      Film Noir:
-        - Film-Noir
+      Film Noir: Film-Noir
       Politics:
         - War & Politics
       Science Fiction:

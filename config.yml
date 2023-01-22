@@ -15,11 +15,11 @@ libraries: # This is called out once within the config.yml file
           collection_mode: hide
           use_lowest: false
           use_popular: false
-          schedule: weekly(friday)
+        schedule: weekly(friday)
       - file: config/Genre.yml
         template_variables:
+          name_separator: Generi
           collection_mode: hide
-          excluding_genre: Short
           append_addons:
             Animation:
               - Animazione
@@ -31,7 +31,7 @@ libraries: # This is called out once within the config.yml file
               - Dramma
             Family:
               - Famiglia
-            Sci-Fi:
+            Science Fiction:
               - Fantascienza
             War:
               - Guerra
@@ -54,15 +54,19 @@ libraries: # This is called out once within the config.yml file
             Famiglia: Family
             Fantascienza: Sci-Fi
             Guerra: War
-            Mistero: Mistery
+            Mistero: Mystery
             Musica: Music
             Storia: History
             televisione film: TV Movie
             Film-Noir: Film Noir
-          summary_genre: Film con genere <<key_name>>
-          genre_summary: Film con genere <<key_name>>
-          summary: Film con genere <<key_name>>
-          schedule: weekly(friday)
+            Noir: Film Noir
+          # this should not be needed because title_format should do the job
+          # name_genre: <<key_name>>
+          # this does not seem to work without translations
+          # summary_genre: Film con genere <<key_name>>
+          # this does not work either
+          # summary: Film con genere <<key_name>>
+        schedule: weekly(friday)
       - pmm: franchise
         template_variables:
           collection_mode: show_items
