@@ -4,7 +4,6 @@ libraries: # This is called out once within the config.yml file
       language: it
       placeholder_tmdb_movie: 11
     metadata_path:
-      # - folder: config/Film/ # This is a local directory on the system
       - file: config/Film/Metadata.yml
       - file: config/Film/Decades.yml
       - pmm: basic # This is a file within the defaults folder in the Repository
@@ -70,8 +69,11 @@ libraries: # This is called out once within the config.yml file
       - pmm: franchise
         template_variables:
           collection_mode: show_items
-          schedule: weekly(friday)
+        schedule: weekly(friday)
       - file: config/Film/Collections.yml # might override some franchise collections
+        schedule: weekly(friday)
+      - file: config/Film/Directors.yml
+        schedule: weekly(friday)
     overlay_path:
       - remove_overlays: false # Set this to true to remove all overlays
       - file: config/Overlays.yml # This is a local file on the system
@@ -81,14 +83,14 @@ libraries: # This is called out once within the config.yml file
     operations:
       split_duplicates: false
   Serie TV:
-    metadata_path:
-      - folder: config/Serie TV/
-    overlay_path:
-      - remove_overlays: false # Set this to true to remove all overlays
-      - file: config/Overlays.yml # This is a local file on the system
-      - pmm: ribbon # This is a file within the defaults folder in the Repository
-      - pmm: resolution
-      - pmm: versions
+    #   metadata_path:
+    #     - folder: config/Serie TV/
+    #   overlay_path:
+    #     - remove_overlays: false # Set this to true to remove all overlays
+    #     - file: config/Overlays.yml # This is a local file on the system
+    #     - pmm: ribbon # This is a file within the defaults folder in the Repository
+    #     - pmm: resolution
+    #     - pmm: versions
     operations:
       split_duplicates: false
 #   Musica:

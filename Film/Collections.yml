@@ -1,12 +1,3 @@
-templates:
-  Actor:
-    actor: tmdb
-    tmdb_person: <<person>>
-    tmdb_actor_details: <<person>>
-    sort_title: +_<<collection_name>>
-    sync_mode: sync
-    collection_order: release
-    collection_mode: hide
 collections:
   Vulture’s 101 Best Movie Endings:
     letterboxd_list: https://letterboxd.com/brianformo/list/vultures-101-best-movie-endings/

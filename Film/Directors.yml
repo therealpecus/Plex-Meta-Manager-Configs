@@ -1,0 +1,100 @@
+external_templates:
+  pmm: templates
+  template_variables:
+    collection_section: 18
+
+translations:
+  pmm: translations
+
+templates:
+  Director:
+    smart_filter:
+      all:
+        director: tmdb
+      sort_by: title.asc
+    tmdb_person: <<person>>
+    sort_title: "!<<collection_section>>_<<collection_name>>"
+    sync_mode: sync
+    summary: Regia di <<collection_name>>
+    collection_mode: hide
+  Brothers:
+    smart_filter:
+      all:
+        director: tmdb
+      sort_by: title.asc
+    tmdb_person: { <<person1>>, <<person2>> }
+    sort_title: "!<<collection_section>>_<<collection_name>>"
+    sync_mode: sync
+    summary: Regia di <<collection_name>>
+    collection_mode: hide
+
+collections:
+  Directors Collections:
+    template:
+      - name: separator
+        separator: director
+      - name: translation
+        key_name: Directors
+        translation_key: separator
+    collection_mode: hide
+  Baz Luhrmann:
+    template:
+      name: Director
+      person: 6201
+    url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-People-bw/master/B/Images/Baz%20Luhrmann.jpg
+  Fratelli Coen:
+    template:
+      name: Brothers
+      person1: 1223
+      person2: 1224
+    url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-People-bw/master/J/Images/Joel%20Coen.jpg
+  Alfred Hitchcock:
+    template:
+      name: Director
+      person: 2636
+    url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-People-bw/master/A/Images/Alfred%20Hitchcock.jpg
+  Quentin Tarantino:
+    template:
+      name: Director
+      person: 138
+    url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-People-bw/master/Q/Images/Quentin%20Tarantino.jpg
+  Christopher Nolan:
+    template:
+      name: Director
+      person: 525
+    url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-People-bw/master/C/Images/Christopher%20Nolan.jpg
+  Martin Scorsese:
+    template:
+      name: Director
+      person: 1032
+    url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-People-bw/master/M/Images/Martin%20Scorsese.jpg
+  Mel Brooks:
+    template:
+      name: Director
+      person: 14639
+    url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-People-bw/master/M/Images/Mel%20Brooks.jpg
+  Ridley Scott:
+    template:
+      name: Director
+      person: 578
+    url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-People-bw/master/R/Images/Ridley%20Scott.jpg
+  Stanley Kubrick:
+    template:
+      name: Director
+      person: 240
+    url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-People-bw/master/S/Images/Stanley%20Kubrick.jpg
+  Steven Spielberg:
+    template:
+      name: Director
+      person: 488
+    url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-People-bw/master/S/Images/Steven%20Spielberg.jpg
+  Tim Burton:
+    template:
+      name: Director
+      person: 510
+    url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-People-bw/master/T/Images/Tim%20Burton.jpg
+  Wes Anderson:
+    template:
+      name: Director
+      person: 5655
+    url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-People-bw/master/W/Images/Wes%20Anderson.jpg
